@@ -6,7 +6,7 @@ SDK_ROOT := D:/Nordic/nRF5SDK16-0098a08e2
 PROJ_DIR := .
 
 $(OUTPUT_DIRECTORY)/nrf52832_xxaa_s132.out: \
-  LINKER_SCRIPT  := $(SDK_ROOT)/linker/secure_bootloader_gcc_nrf52.ld
+  LINKER_SCRIPT  := $(PROJ_DIR)/linker/secure_bootloader_gcc_nrf52.ld
 
 # Source files common to all targets
 SRC_FILES += \
@@ -45,7 +45,7 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_hash.c \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_init.c \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_shared.c \
-  $(PROJ_DIR)/public_key.c \
+  $(PROJ_DIR)/key/public_key.c \
   $(PROJ_DIR)/main.c \
   $(SDK_ROOT)/components/ble/common/ble_srv_common.c \
   $(SDK_ROOT)/components/libraries/bootloader/nrf_bootloader.c \
